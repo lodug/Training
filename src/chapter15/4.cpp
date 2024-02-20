@@ -13,3 +13,11 @@ void Date::print() const // print function definition
 {
     std::cout << "Date(" << m_year << ", " << m_month << ", " << m_day << ")\n";
 };
+
+int main()
+{
+    const Date d{ 2024, 02, 20 };
+    d.print();
+
+    return 0;
+}
