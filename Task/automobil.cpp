@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-class Automobil
+class Automobil   //this Automobil is an abtract base class
 {
 private:
 	std::string m_combustibil;
@@ -21,13 +21,13 @@ public:
         , m_echipare{ echipare }
         , m_VIN { VIN }
 	{
-		 std::cout << "Constructing Automobil " << '\n';
+		// std::cout << "Constructing Automobil " << '\n';
 	}
 
-	~Automobil()
-    {
-        std::cout << "Destructing Automobil" << '\n';
-    }
+	// ~Automobil()
+    // {
+    //     std::cout << "Destructing Automobil" << '\n';
+    // }
 
 	const std::string& getCombustibil() const { return m_combustibil; }
 	const std::string& getCaroserie() const { return m_caroserie; }
@@ -35,6 +35,10 @@ public:
 	int getPutere() const { return m_putere; }
 	const std::string& getEchipare() const { return m_echipare; }
 	const std::string& getVIN() const { return m_VIN; }	
+
+    virtual std::string consumCombustibil() const = 0; //consumCombustibil is a pure virtual function
+
+    virtual ~Automobil() = default;
 
 	// void print() const
 	// {
@@ -59,6 +63,7 @@ public:
         }
 
         const std::string& getColor() const { return m_color; }	
+        std::string consumCombustibil() const override { return "5.7l la 100km"; };
 };
 
 // Masina2 publicly inheriting Automobil
@@ -73,17 +78,20 @@ public:
         {
         }
 
+        std::string consumCombustibil() const override { return "4.7l la 100km"; };
+
 };
 
 int main()
 {
-	const Masina1 m1{ "benzina", "break", "spate", 56, "a5gh", "djdjdjdj", "red" };
-	std::cout << "Masina1(" << m1.getCombustibil() << ", " << m1.getCaroserie() << ", " << m1.getTractiune() << ", " << m1.getPutere() 
-              <<  ", " << m1.getEchipare() << ", " << m1.getVIN() << ", " << m1.getColor() << ')' << '\n';
+	Masina1 m1{ "benzina", "break", "spate", 56, "a5gh", "djdjdjdj", "red" };
+	// std::cout << "Masina1(" << m1.getCombustibil() << ", " << m1.getCaroserie() << ", " << m1.getTractiune() << ", " << m1.getPutere() 
+    //           <<  ", " << m1.getEchipare() << ", " << m1.getVIN() << ", " << m1.getColor() << ')' << '\n';
+    std::cout << "Masina1 are un consum de " << m1.consumCombustibil() << " de " << m1.getCombustibil() << '\n';
 
-	const Masina2 m2{ "motorina", "coupe", "fata", 56, "ahdhhd", "bbb"};
-	std::cout << "Masina2(" << m2.getCombustibil() << ", " << m2.getCaroserie() << ", " << m2.getTractiune() << ", " << m2.getPutere() 
-              <<  ", " << m2.getEchipare() << ", " << m2.getVIN() << ')' << '\n';
+	// Masina2 m2{ "motorina", "coupe", "fata", 56, "ahdhhd", "bbb"};
+	// std::cout << "Masina2(" << m2.getCombustibil() << ", " << m2.getCaroserie() << ", " << m2.getTractiune() << ", " << m2.getPutere() 
+    //           <<  ", " << m2.getEchipare() << ", " << m2.getVIN() << ')' << '\n';
 
 	return 0;
 }
