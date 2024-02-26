@@ -31,8 +31,17 @@ public:
 
 int main()
 {
+    //A pure virtual function makes it so the base class can not be instantiated, 
+    //and the derived classes are forced to define these functions before they can be instantiated.
     Cow cow{ "Betsy" };
     std::cout << cow.getName() << " says " << cow.speak() << '\n';
 
+    // pure virtual functions can be called using a reference (or pointer) to a base class:
+    Animal& ra{ cow };
+    std::cout << ra.speak() << '\n'; // resolves to Cow::speak(), prints "Moo"
+
+    Animal* pa{ &cow };
+    std::cout << pa->speak() << '\n'; // resolves to Cow::speak(), prints "Moo"
+   
     return 0;
 }

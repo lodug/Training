@@ -34,6 +34,7 @@ public:
 
 int main()
 {
+    
 	Derived d{ 5 };
 	d.print();
     Base b{3};
