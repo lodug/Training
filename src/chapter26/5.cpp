@@ -7,6 +7,7 @@
 //Note that a class template specialization requires the class that it is specializing to be defined first.
 
 #include <cstdint>
+#include <iostream>
 
 // First define our non-specialized class template
 template <typename T>
