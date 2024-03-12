@@ -39,7 +39,7 @@ int main()
     std::cout << "uniquePtr1 changed: " << '\n';
     print(sharedPtr1, sharedPtr2, uniquePtr1, uniquePtr2);
 
-    // sharedPtr2  will point to what sharedPtr1 is pointing to
+    // sharedPtr2  will point to what sharedPtr1 is pointing to:create anither shared pointer pointing to the same object
     sharedPtr2 = sharedPtr1;
     std::cout << "sharedPtr2 = sharedPtr1: " << '\n';
     print(sharedPtr1, sharedPtr2, uniquePtr1, uniquePtr2);
@@ -66,5 +66,3 @@ int main()
 //The difference between the 2 is that shared pointers can point to memory that multiple things are pointing to
 //unique pointers can only point to something that this alone is pointing to
 
-//smart pointer has the advantage than raw pointer that a shared pointer is shared; wou can wind up in cases where you don;t free instance
-//of a thing that is referring to that pointer, so usually you going to want to stick with unique pointers unless you have a good reason to go with a shared pointer
