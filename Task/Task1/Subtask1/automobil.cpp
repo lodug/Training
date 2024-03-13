@@ -1,3 +1,4 @@
+//subtask1
 #include "automobil.h"
 
 //constructor with parameteres that initializes the Automobil object 
