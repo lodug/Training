@@ -1,3 +1,5 @@
+//subtask3
+
 #ifndef MASINA1_H
 #define MASINA1_H
 
