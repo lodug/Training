@@ -99,3 +99,7 @@ int main()
 
     return 0;
 }
+
+//three ways of running a thread. Well, we've only really seen one way of running a thread, but we can pass to this to the constructor of this thread.
+
+//These thread objects we can pass function pointers, lambda expressions or callable objects.All three.
