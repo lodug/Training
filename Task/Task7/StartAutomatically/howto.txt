@@ -1,0 +1,26 @@
+//Task 7: sa se implementeze un bash script care la start-up sa porneasca serveul si cleintul implementate in taskul 5 . 
+//Scriptul trebuie apelat in mod automat la start-up de sistemul de operare.
+
+For the task5/sockets, I have written the following script:
+
+1. startAutomatically.sh
+2. in this script I added the commands that compile the server.cpp and client.cpp
+NOTE: added the "mv" command because when closing the virtual machine, after opening it again
+and the terminal, the directory is home/projectx and I wanted that the executables and 
+the output files to be in the folder for Task7: ~/Practice/C++/Training/Task/Task7/StartAutomatically/
+4. in order to be run automatically, I added the script in the .bashrc file 
+- cd ~ 
+ls -la
+nano file .bashrc 
+5. in the file .bashrc, I added at the end my script:
+
+#run my script for server client  task
+~/Practice/C++/Training/Task/Task7/StartAutomatically/startAutomatically.sh
+
+6. ctrl x to save it
+
+7. close the virtual machine
+
+8. open it again and open the terminal
+
+9.the script has been run automatically, the files were generated
