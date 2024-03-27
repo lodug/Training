@@ -1,0 +1,19 @@
+compile and run:
+
+1. open two terminals
+
+2. first terminal: compile server.cpp: 
+
+                                        g++ server.cpp -o serverb
+
+3. second terminal: compile client.cpp: 
+
+                                        g++ client.cpp -o clientb
+
+4. first terminal: run: 
+
+                                        ./serverb
+
+5. second terminal: run: 
+
+                                        ./clientb
