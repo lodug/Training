@@ -1,0 +1,21 @@
+1. check if the BOOST library is installed
+
+2. checked it in the root: 
+            cd //
+            find / -name "lib_boost_unit_test_framework"
+
+3. created a file for Unit Tests: unitTestBoost.cpp for the test cases
+
+4. in order to compile adn run the tests: 
+
+            g++ -o singletone -c singletone.cpp
+            g++ -o unittest -c unitTestBoost.cpp
+            g++ -o main -c main.cpp
+            g++ -o unittestExecutable singletone unittest -lboost_unit_test_framework
+            ./unittestExecutable --log_level=message
+
+            
+
+
+
+
