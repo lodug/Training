@@ -9,9 +9,13 @@
 4. in order to compile adn run the tests: 
 
             g++ -o singletone -c singletone.cpp
+
             g++ -o unittest -c unitTestBoost.cpp
+
             g++ -o main -c main.cpp
+
             g++ -o unittestExecutable singletone unittest -lboost_unit_test_framework
+            
             ./unittestExecutable --log_level=message
 
             
