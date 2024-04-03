@@ -1,0 +1,3 @@
+/home/projectx/Practice/C++/Training/Task/Task10/build_directory/CMakeFiles/rebuild_cache.dir
+/home/projectx/Practice/C++/Training/Task/Task10/build_directory/CMakeFiles/edit_cache.dir
+/home/projectx/Practice/C++/Training/Task/Task10/build_directory/CMakeFiles/executable.dir
