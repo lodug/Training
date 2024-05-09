@@ -1,0 +1,46 @@
+Task 10: sa porteze partea de build catre cmake pentru unul din taskurile implementate anterior (taskul cu cele mai multe fisiere).
+
+- did it for Task1/subtask3
+
+Steps:
+
+in Task10 directory I created the:
+
+- src directory (with the source files)
+- include directory (with the header files) 
+- CMakeLists.txt file -  the file that contains instructions for building my project with cmake
+
+1.  in src directory: 
+
+    g++ main.cpp automobil.cpp masina1.cpp masina2.cpp -o executable
+
+    ./executable
+
+2. BUild the project with cmake:
+
+in Task10 directory:
+
+- create the directory: build_directory
+
+    mkdir build_directory
+    cd build_directory
+
+- from the build_directory run:
+ 
+    cmake ..
+
+- build the project using make tool:
+
+    make
+
+- the project was built and the "executable" executable found in the build_directory
+
+- run the executable and see if the output is correct
+
+    ./executable
+
+
+
+
+
+
